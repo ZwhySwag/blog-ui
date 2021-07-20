@@ -57,6 +57,10 @@ body {
 	margin-bottom: 5em !important;
 }
 
+.m-margin-lr-middle {
+	margin-right: 3em !important;
+}
+
 .m-margin-bottom-mini {
 	margin-bottom: 0.5em !important;
 }
@@ -100,6 +104,11 @@ body {
 
 .m-article-container {
 	max-width: 60em !important;
+	margin: auto !important;
+}
+
+.m-article-container-large {
+	max-width: 80em !important;
 	margin: auto !important;
 }
 
