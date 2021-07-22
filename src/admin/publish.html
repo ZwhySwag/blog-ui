@@ -6,6 +6,7 @@
 		<title>博客发布页面</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
 		<link rel="stylesheet" href="../static/css/me.css"/>
+		<link rel="stylesheet" href="../static/lib/editormd/css/editormd.min.css"/>
 	</head>
 	<body>
 		<!-- 导航 -->
@@ -70,9 +71,13 @@
 							<input type="text" name="title"  placeholder="标题" />
 						</div>
 					</div>
+					
 					<div class="field">
-						<textarea name="content" placeholder="博客内容"></textarea>
+						<div id="md-content" style="z-index: 1 !important">
+							<textarea name="content" placeholder="博客内容"></textarea>
+						</div>
 					</div>
+					
 					<div class="two fields">
 						<div class="field">
 							<div class="ui left action labeled input">
@@ -209,7 +214,20 @@
 		<!-- 以CDN的方式引入jquery和semantic框架 -->
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+		<script src="../static/lib/editormd/editormd.min.js">
+			
+		</script>
 			<script>
+				// markdown编辑器初始化
+				var contentEditor;
+				$(function() {
+				    testEditor = editormd("md-content", {
+				        width   : "100%",
+				        height  : 640,
+				        syncScrolling : "single",
+				        path    : "../static/lib/editormd/lib/"
+				    });
+				});
 				// 隐藏和展示导航栏信息
 				$("#navigation-trigger").click(function () {
 					$(".mobile-mide-nava").toggleClass("item m-mobile-hide");
