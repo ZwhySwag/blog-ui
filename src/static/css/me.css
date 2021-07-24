@@ -27,6 +27,10 @@ body {
 	padding: 0.2em !important;
 }
 
+.m-padded-middle {
+	padding: 0.5em !important;
+}
+
 .m-padded-lr-middle {
 	padding-left: 4em !important;
 	padding-right: 4em !important;
@@ -119,9 +123,16 @@ body {
 
 /* 位置 */
 .m-top-right-location {
-	position: absolute;
-	top: 15px;
-	right: 0;
+	position: absolute !important;
+	top: 15px  !important;
+	right: 0  !important;
+}
+
+.m-fixed-right-bottom {
+	position: fixed !important;
+	bottom: 0 !important;
+	right: 0 !important;
+	z-index: 1 !important;
 }
 
 /* 阴影 */
